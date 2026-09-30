@@ -1,0 +1,1794 @@
+:root {
+    --orange: #ff7a00;
+    --light-orange: #fff3e6;
+    --dark-orange: #e86600;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+body {
+    font-family: "Outfit", Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body :not(.bi):not([class^="bi-"]):not([class*=" bi-"]) {
+    font-family: "Outfit", Arial, sans-serif !important;
+}
+
+.step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+
+        /* ============================= */
+        /* COMMON MODAL */
+        /* ============================= */
+
+        .demo-modal .modal-content,
+        .teacher-modal .modal-content,
+        .course-modal .modal-content {
+            border: none;
+            border-radius: 20px;
+        }
+
+        .demo-modal .modal-header,
+        .teacher-modal .modal-header,
+        .course-modal .modal-header {
+            border-bottom: none;
+            padding: 25px 30px 10px;
+        }
+
+        .demo-modal .modal-body,
+        .teacher-modal .modal-body,
+        .course-modal .modal-body {
+            padding: 10px 30px 30px;
+        }
+
+        .demo-modal .modal-title,
+        .teacher-modal .modal-title,
+        .course-modal .modal-title {
+            font-weight: 700;
+        }
+
+        .demo-modal .form-control,
+        .demo-modal .form-select,
+        .teacher-modal .form-control,
+        .teacher-modal .form-select {
+            border-radius: 10px;
+            padding: 12px 15px;
+        }
+
+        .demo-modal .progress,
+        .teacher-modal .progress {
+            border-radius: 20px;
+        }
+
+        .demo-modal .progress-bar,
+        .teacher-modal .progress-bar {
+            background-color: #ff7e27;
+        }
+
+
+        /* ============================= */
+        /* DEMO CLASS SELECTION */
+        /* ============================= */
+
+        .class-selection {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+        }
+
+        .class-option {
+            background-color: #ffffff;
+            border: 1px solid #d9dfe5;
+            border-radius: 10px;
+            padding: 14px 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #263238;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .class-option:hover {
+            border-color: #ff7e27;
+            color: #ff7e27;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 126, 39, 0.12);
+        }
+
+        .class-option.selected {
+            background-color: #ff7e27;
+            border-color: #ff7e27;
+            color: white;
+            box-shadow: 0 6px 18px rgba(255, 126, 39, 0.25);
+        }
+
+        .class-option:focus {
+            outline: none;
+            border-color: #ff7e27;
+        }
+
+        .demo-class-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .demo-class-subtitle {
+            color: #777;
+            font-size: 15px;
+        }
+
+
+        /* ============================= */
+        /* DEMO BUTTON */
+        /* ============================= */
+
+        .demo-modal .btn-orange {
+            background-color: #ff7e27;
+            color: white;
+            border: none;
+        }
+
+        .demo-modal .btn-orange:hover {
+            background-color: #e96d18;
+            color: white;
+        }
+
+
+        /* ============================= */
+        /* TEACHER */
+        /* ============================= */
+
+        .teacher-modal .btn-orange {
+            background-color: #ff7e27;
+            color: white;
+            border: none;
+        }
+
+        .teacher-modal .btn-orange:hover {
+            background-color: #e96d18;
+            color: white;
+        }
+
+
+        /* ============================= */
+        /* COURSE DETAILS */
+        /* ============================= */
+
+        .course-modal .modal-dialog {
+            max-width: 900px;
+        }
+
+        .course-modal .course-icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background-color: #fff1e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .course-modal .course-detail-card {
+            background-color: #fafafa;
+            border: 1px solid #eeeeee;
+            border-radius: 16px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .course-modal .course-detail-label {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .course-modal .course-detail-value {
+            font-size: 17px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .course-modal .course-table {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #eeeeee;
+        }
+
+        .course-modal .course-table thead th {
+            background-color: #ff7e27;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-weight: 600;
+        }
+
+        .course-modal .course-table tbody td {
+            padding: 18px;
+            vertical-align: middle;
+            border-color: #eeeeee;
+        }
+
+        .course-modal .course-highlight {
+            background-color: #fff7f1;
+            border-left: 4px solid #ff7e27;
+            border-radius: 10px;
+            padding: 15px 18px;
+        }
+
+        .course-modal .btn-orange {
+            background-color: #ff7e27;
+            color: white;
+            border: none;
+        }
+
+        .course-modal .btn-orange:hover {
+            background-color: #e96d18;
+            color: white;
+        }
+
+
+        /* ============================= */
+        /* RESPONSIVE CLASS BUTTONS */
+        /* ============================= */
+
+        @media (max-width: 992px) {
+
+            .class-selection {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .class-selection {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .demo-modal .modal-header,
+            .teacher-modal .modal-header,
+            .course-modal .modal-header {
+                padding: 20px 20px 10px;
+            }
+
+            .demo-modal .modal-body,
+            .teacher-modal .modal-body,
+            .course-modal .modal-body {
+                padding: 10px 20px 25px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .class-selection {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .class-option {
+                font-size: 14px;
+                padding: 12px 8px;
+            }
+
+            .demo-class-title {
+                font-size: 20px;
+            }
+
+        }
+/* =========================
+   NAVBAR
+========================= */
+
+.logo {
+    font-size: 28px;
+    color: #222;
+}
+
+.logo span,
+.footer span {
+    color: var(--orange);
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--orange);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-orange {
+    background-color: var(--orange);
+    color: white;
+    border: 2px solid var(--orange);
+    border-radius: 30px;
+    padding: 10px 24px;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: var(--dark-orange);
+    border-color: var(--dark-orange);
+    color: white;
+}
+
+.btn-outline-orange {
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 30px;
+    padding: 10px 24px;
+    transition: 0.3s;
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    background: linear-gradient(135deg,
+            #fff8f0,
+            #ffffff);
+
+    min-height: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    line-height: 1.2;
+}
+
+.hero-section h1 span {
+    color: var(--orange);
+}
+
+.hero-badge {
+    background-color: var(--light-orange);
+    color: var(--orange);
+    padding: 10px 18px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section {
+    width: 100%;
+}
+
+#home,
+#about,
+#courses,
+#activities,
+#joiners,
+#testimonials {
+    scroll-margin-top: 80px;
+}
+
+.section-label {
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+/* =========================
+   PARALLAX
+========================= */
+
+.parallax-section {
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(rgba(255, 122, 0, 0.75),
+            rgba(255, 122, 0, 0.75)),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.parallax-content {
+    padding: 100px 20px;
+    width: 100%;
+}
+
+/* =========================
+   COURSES
+========================= */
+.moving-box {
+    overflow: hidden;
+    background-color: #ff7e27;
+    color: white;
+    padding: 12px 0;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.moving-text {
+    display: inline-flex;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    animation: moveText 8s linear infinite;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+.subject-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-10px);
+}
+
+.subject-card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.subject-icon {
+    width: 55px;
+    height: 55px;
+
+    background-color: var(--light-orange);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    color: var(--orange);
+}
+
+.subject-icon i {
+    line-height: 1;
+}
+
+.learn-link {
+    color: var(--orange);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.learn-link:hover {
+    color: var(--dark-orange);
+}
+
+body.with-demo-bottom-bar {
+    padding-bottom: 82px;
+}
+
+.demo-sticky-cta {
+    position: fixed;
+    z-index: 1020;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 12px 0;
+    color: #fff;
+    background: #252c45;
+    box-shadow: 0 -8px 24px rgba(28, 32, 49, .16);
+}
+
+.demo-sticky-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.demo-sticky-copy {
+    font-weight: 600;
+}
+
+.demo-sticky-cta .btn {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+    body.with-demo-bottom-bar {
+        padding-bottom: 72px;
+    }
+
+    .demo-sticky-cta {
+        padding: 9px 0;
+    }
+
+    .demo-sticky-cta-inner {
+        justify-content: center;
+    }
+
+    .demo-sticky-copy {
+        display: none;
+    }
+
+    .demo-sticky-cta .btn {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+/* =========================
+   SECOND PARALLAX
+========================= */
+
+.parallax-two {
+    min-height: 450px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)),
+        url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-box {
+    background-color: rgba(255, 255, 255, 0.95);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activity-card {
+    transition: 0.3s;
+    height: 100%;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+}
+
+.activity-icon {
+    font-size: 55px;
+}
+
+#activitiesIntro[hidden],
+#activityList[hidden],
+#activitiesPlayground[hidden] {
+    display: none !important;
+}
+
+.activity-playground {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.activity-back-button {
+    margin-bottom: 20px;
+}
+
+.activity-play-card {
+    padding: clamp(24px, 5vw, 52px);
+    border: 1px solid #f0e6dd;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 16px 44px rgba(34, 34, 34, 0.08);
+}
+
+.activity-play-card h2 {
+    color: #222;
+}
+
+.activity-progress {
+    margin: 18px 0 8px;
+    color: #68737d;
+    font-weight: 600;
+}
+
+.activity-progress-track {
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #f1f2f3;
+}
+
+.activity-progress-track span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ff9a32, var(--orange));
+    transition: width 300ms ease;
+}
+
+.activity-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.activity-option {
+    min-height: 60px;
+    padding: 14px 18px;
+    border: 2px solid #eceff1;
+    border-radius: 15px;
+    color: #30363b;
+    background: #fff;
+    font-weight: 600;
+    text-align: left;
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.activity-option:hover:not(:disabled),
+.activity-option:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--orange);
+    background: #fff8f0;
+}
+
+.activity-option.is-correct {
+    border-color: #58a66b;
+    color: #236532;
+    background: #effaf1;
+}
+
+.activity-option.is-incorrect {
+    border-color: #e58c83;
+    color: #8b332d;
+    background: #fff3f1;
+}
+
+.activity-feedback {
+    min-height: 28px;
+    margin: 18px 0 0;
+    color: #68737d;
+    font-weight: 600;
+}
+
+.activity-feedback.is-correct {
+    color: #236532;
+}
+
+.activity-feedback.is-incorrect {
+    color: #8b332d;
+}
+
+.activity-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+@media (max-width: 575.98px) {
+    .activity-options {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-play-card {
+        border-radius: 18px;
+    }
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-section {
+    background: linear-gradient(180deg, #fffaf5 0%, #fff 100%);
+}
+
+.testimonials-intro {
+    max-width: 620px;
+}
+
+.testimonial-card {
+    padding: 30px;
+    border: 1px solid #f1e5da;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(34, 34, 34, 0.06);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(34, 34, 34, 0.1);
+}
+
+.testimonial-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.testimonial-stars {
+    color: var(--orange);
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+}
+
+.testimonial-score {
+    color: #535b63;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.testimonial-card blockquote {
+    min-height: 120px;
+    margin: 0 0 24px;
+    color: #535b63;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-avatar {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--dark-orange);
+    background: var(--light-orange);
+    font-weight: 700;
+}
+
+.testimonial-author strong,
+.testimonial-author span:not(.testimonial-avatar) {
+    display: block;
+}
+
+.testimonial-author span:not(.testimonial-avatar) {
+    margin-top: 2px;
+    color: #747c84;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    background-color: var(--orange);
+    text-align: center;
+}
+
+/* Scroll reveals: calm entrances for learning content, playful pops for kids' sections. */
+@media (prefers-reduced-motion: no-preference) {
+    .has-scroll-motion [data-reveal] {
+        opacity: 0;
+        transition: opacity 650ms ease, transform 750ms cubic-bezier(0.2, 0.7, 0.2, 1);
+        transition-delay: var(--reveal-delay, 0ms);
+        will-change: opacity, transform;
+    }
+
+    .has-scroll-motion [data-reveal="professional"] {
+        transform: translate3d(0, 24px, 0);
+    }
+
+    .has-scroll-motion [data-reveal="playful"] {
+        transform: translate3d(0, 30px, 0) scale(0.96);
+    }
+
+    .has-scroll-motion [data-reveal].is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        will-change: auto;
+    }
+
+    .hero-image img {
+        animation: learning-image-float 5s ease-in-out infinite;
+    }
+
+    #courses .subject-card,
+    #activities .activity-card {
+        transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    #courses .subject-card img {
+        transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    #courses .subject-card:hover img {
+        transform: scale(1.05);
+    }
+
+    #courses .subject-card:hover {
+        transform: translateY(-8px) rotate(-0.4deg);
+        box-shadow: 0 1rem 2rem rgba(28, 45, 70, 0.14) !important;
+    }
+
+    #activities .activity-card:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+
+    .activity-icon,
+    .subject-icon {
+        display: inline-flex;
+        transition: transform 250ms ease;
+    }
+
+    .activity-card:hover .activity-icon {
+        animation: kid-friendly-bounce 550ms ease;
+    }
+
+    .subject-card:hover .subject-icon {
+        transform: rotate(-8deg) scale(1.08);
+    }
+}
+
+@keyframes learning-image-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes kid-friendly-bounce {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    40% { transform: translateY(-8px) rotate(-7deg); }
+    70% { transform: translateY(1px) rotate(4deg); }
+}
+
+/* Keep the sticky header compact and leave just enough room for the course ticker. */
+.hustle-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    min-height: 76px;
+    padding-block: 4px;
+}
+
+.hustle-navbar .navbar-brand img {
+    width: auto;
+    height: 50px;
+}
+
+.hustle-navbar .logo {
+    font-size: 25px;
+}
+
+.hustle-navbar .btn-orange {
+    padding: 9px 20px;
+    font-size: 1rem;
+}
+
+#home,
+#about,
+#courses,
+#activities,
+#joiners,
+#testimonials {
+    scroll-margin-top: 80px;
+}
+
+#about,
+#activities,
+#testimonials {
+    padding-block: 1rem 2rem !important;
+}
+
+#about > .container.py-5,
+#activities > .container.py-5,
+#testimonials > .container.py-5 {
+    padding-block: 1rem 1.5rem !important;
+}
+
+#joiners {
+    padding-block: 2rem !important;
+}
+
+#joiners > .container {
+    padding-block: 0 !important;
+}
+
+#joiners .row {
+    align-items: center;
+}
+
+#joiners .col-lg-6:last-child img {
+    width: 100%;
+    height: clamp(260px, 36vw, 460px);
+    object-fit: cover;
+}
+
+#courses {
+    padding-top: 0 !important;
+}
+
+#courses > .container {
+    padding-top: 1.5rem !important;
+}
+
+@media (max-width: 1199.98px) {
+    .hustle-navbar {
+        min-height: 64px;
+        padding-block: 6px;
+    }
+
+    .hustle-navbar > .container {
+        min-height: 52px;
+    }
+
+    .hustle-navbar .navbar-brand {
+        display: flex;
+        align-items: center;
+        padding-block: 0;
+        line-height: 1;
+    }
+
+    .hustle-navbar .navbar-brand img,
+    .hustle-navbar .hustle-logo-img {
+        display: block;
+        height: 44px;
+        width: auto;
+    }
+
+    .hustle-navbar .logo {
+        font-size: 22px;
+    }
+
+    /* Mobile & Tablet Collapsible Menu Card */
+    .hustle-navbar .navbar-collapse {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+        padding: 1.15rem 1.35rem;
+        margin-top: 0.75rem;
+        border: 1px solid #f2e3d5;
+        max-height: calc(100vh - 85px);
+        overflow-y: auto;
+    }
+
+    .hustle-navbar .navbar-nav .nav-item {
+        border-bottom: 1px solid #f9efe5;
+    }
+
+    .hustle-navbar .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .hustle-navbar .navbar-nav .nav-link {
+        padding: 0.75rem 0.6rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #2b2b2b;
+        display: block;
+        margin: 0;
+        border-radius: 10px;
+        transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .hustle-navbar .navbar-nav .nav-link:hover,
+    .hustle-navbar .navbar-nav .nav-link.active {
+        color: var(--orange);
+        background-color: #fff9f2;
+        padding-left: 0.85rem;
+    }
+
+    .hustle-navbar .btn-orange {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.75rem;
+        padding: 12px 20px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        border-radius: 999px;
+    }
+
+    #home,
+    #about,
+    #courses,
+    #activities,
+    #joiners,
+    #testimonials {
+        scroll-margin-top: 72px;
+    }
+
+    #about,
+    #activities,
+    #testimonials {
+        padding-block: .75rem 1.5rem !important;
+    }
+
+    #about > .container.py-5,
+    #activities > .container.py-5,
+    #testimonials > .container.py-5 {
+        padding-block: .75rem 1rem !important;
+    }
+
+    #joiners .col-lg-6:last-child img {
+        height: clamp(250px, 58vw, 420px);
+    }
+
+    #courses > .container {
+        padding-top: 1rem !important;
+    }
+
+    #testimonials {
+        padding-top: 1rem !important;
+    }
+
+    #testimonials > .container {
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #home,
+    #about,
+    #courses,
+    #activities,
+    #joiners,
+    #testimonials {
+        scroll-margin-top: 64px;
+    }
+
+    .hustle-navbar .navbar-collapse {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .hustle-navbar .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.65rem 0.5rem;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #222;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    color: var(--orange);
+}
+
+/* =========================
+   ALL MODALS
+========================= */
+
+.modal-dialog {
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+
+    margin: auto;
+
+    border: none;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.modal-body {
+    overflow-y: auto;
+}
+
+/* =========================
+   TEACHER HIRING MODAL
+========================= */
+
+.teacher-modal .modal-dialog {
+    max-width: 850px;
+}
+
+.teacher-modal .modal-content {
+    border-radius: 20px;
+}
+
+.teacher-modal .modal-header {
+    padding: 25px 35px 10px;
+    border-bottom: none;
+}
+
+.teacher-modal .modal-body {
+    padding: 20px 35px 35px;
+}
+
+.teacher-modal .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.teacher-modal .progress {
+    height: 7px;
+    border-radius: 20px;
+}
+
+.teacher-modal .progress-bar {
+    background-color: var(--orange);
+}
+
+.teacher-modal .step {
+    display: none;
+}
+
+.teacher-modal .step.active {
+    display: block;
+}
+
+.teacher-modal .card {
+    border: none;
+    border-radius: 18px;
+}
+
+.teacher-modal .form-control,
+.teacher-modal .form-select {
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.teacher-modal .form-label {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   TEACHER SUCCESS MESSAGE
+========================= */
+
+#teacherSuccessMessage {
+    text-align: center;
+    padding: 45px 30px !important;
+}
+
+#teacherSuccessMessage .display-1 {
+    font-size: 65px;
+}
+
+#teacherSuccessMessage h3 {
+    font-size: 28px;
+}
+
+#teacherSuccessMessage p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* =========================
+   ALERT POPUP
+========================= */
+
+#alertModal .modal-dialog {
+    max-width: 500px;
+}
+
+#alertModal .modal-content {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    border-radius: 20px;
+}
+
+#alertModal .modal-body {
+    padding: 35px 30px;
+    text-align: center;
+}
+
+#alertModal #modalTitle {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#alertModal #modalMessage {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+#alertModal .btn {
+    min-width: 200px;
+    font-size: 18px;
+    padding: 10px 35px;
+    border-radius: 50px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .navbar .btn-orange {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 32px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .teacher-modal .modal-dialog {
+        max-width: 95%;
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 28px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-height: 400px;
+    }
+
+    .parallax-section,
+    .parallax-two {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+
+    .parallax-content {
+        padding: 70px 20px;
+    }
+
+    .quote-box {
+        padding: 30px 20px;
+    }
+
+    .quote-box h2 {
+        font-size: 28px;
+    }
+
+    .subject-card img {
+        height: 200px;
+    }
+
+    .teacher-modal .modal-header {
+        padding: 20px 20px 10px;
+    }
+
+    .teacher-modal .modal-body {
+        padding: 15px 20px 25px;
+    }
+
+    .teacher-modal .modal-title {
+        font-size: 25px;
+    }
+
+    #alertModal #modalTitle {
+        font-size: 26px;
+    }
+
+    #alertModal #modalMessage {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero-section {
+        padding: 24px 12px;
+    }
+
+    .hero-section h1 {
+        font-size: 34px;
+    }
+
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .hero-image {
+        margin-top: 25px;
+    }
+
+    .hero-image img {
+        max-height: 320px;
+    }
+
+    .section-label {
+        font-size: 12px;
+    }
+
+    .parallax-section {
+        min-height: 350px;
+    }
+
+    .parallax-two {
+        min-height: 350px;
+    }
+
+    .parallax-content {
+        padding: 60px 15px;
+    }
+
+    .parallax-content h2 {
+        font-size: 30px;
+    }
+
+    .quote-box {
+        padding: 25px 15px;
+    }
+
+    .quote-box h2 {
+        font-size: 24px;
+    }
+
+    .activity-icon {
+        font-size: 45px;
+    }
+
+    .modal-dialog {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+        border-radius: 16px;
+    }
+
+    .teacher-modal .modal-dialog {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+
+    .teacher-modal .modal-header {
+        padding: 18px 18px 8px;
+    }
+
+    .teacher-modal .modal-body {
+        padding: 10px 18px 20px;
+    }
+
+    .teacher-modal .modal-title {
+        font-size: 22px;
+    }
+
+    .teacher-modal .modal-body h4 {
+        font-size: 21px;
+    }
+
+    .teacher-modal .form-control,
+    .teacher-modal .form-select {
+        font-size: 16px;
+    }
+
+    .teacher-modal .btn {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
+
+    #teacherSuccessMessage {
+        padding: 30px 15px !important;
+    }
+
+    #teacherSuccessMessage .display-1 {
+        font-size: 50px;
+    }
+
+    #teacherSuccessMessage h3 {
+        font-size: 23px;
+    }
+
+    #teacherSuccessMessage p {
+        font-size: 15px !important;
+    }
+
+    #alertModal .modal-dialog {
+        max-width: 92%;
+    }
+
+    #alertModal .modal-body {
+        padding: 30px 20px;
+    }
+
+    #alertModal #modalTitle {
+        font-size: 24px;
+    }
+
+    #alertModal #modalMessage {
+        font-size: 17px;
+    }
+
+    #alertModal .btn {
+        min-width: 170px;
+        font-size: 16px;
+    }
+
+}
+
+/* Demo booking confirmation */
+.demo-success {
+    padding: clamp(16px, 3vw, 36px);
+    border: 1px solid #ffe1c5;
+    border-radius: 22px;
+    color: #252525;
+    background: #fff;
+    text-align: left;
+}
+
+.demo-success-topline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.demo-confirmed,
+.demo-trial-badge,
+.demo-topic-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border: 1px solid #ffd4ad;
+    border-radius: 999px;
+    color: #a84d00;
+    background: #fff7ef;
+    font-weight: 700;
+}
+
+.demo-confirmed i,
+.demo-topic-pill i {
+    color: var(--orange);
+}
+
+.demo-trial-badge {
+    border-color: var(--orange);
+    color: #fff;
+    background: var(--orange);
+}
+
+.demo-success-title {
+    margin-bottom: 16px;
+    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    font-weight: 800;
+}
+
+.demo-schedule-card {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: center;
+    gap: 16px;
+    min-height: 126px;
+    padding: 20px 24px;
+    border: 1px solid #e86600;
+    border-radius: 18px;
+    color: #fff;
+    background: linear-gradient(120deg, #ff7a00, #e86600);
+}
+
+.demo-schedule-date,
+.demo-schedule-time {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.demo-schedule-date strong {
+    font-size: 1.8rem;
+}
+
+.demo-schedule-time {
+    align-items: center;
+}
+
+.demo-schedule-time strong {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1;
+}
+
+.demo-schedule-time span {
+    margin-top: 6px;
+}
+
+.demo-success-note {
+    margin: 12px 0 0;
+    color: #737b83;
+}
+
+.demo-success-divider {
+    margin: 24px 0;
+    border-color: #e9ecef;
+    opacity: 1;
+}
+
+.demo-success-section h4 {
+    margin-bottom: 14px;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.demo-topic-pill {
+    margin-bottom: 16px;
+    border-color: #ffd4ad;
+    background: #fffaf5;
+}
+
+.demo-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.demo-benefit-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 112px;
+    padding: 16px;
+    border: 1px solid #f0e4da;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.demo-benefit-card > i {
+    flex: 0 0 auto;
+    color: var(--dark-orange);
+    font-size: 1.55rem;
+}
+
+.demo-benefit-card h5 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.demo-benefit-card p {
+    margin: 0;
+    color: #737b83;
+    font-size: 0.9rem;
+}
+
+.demo-discount-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 14px 17px;
+    border: 1px solid #ffbd76;
+    border-radius: 15px;
+    color: #804000;
+    background: #fff3e4;
+}
+
+.demo-discount-note > i {
+    color: var(--dark-orange);
+    font-size: 1.35rem;
+}
+
+.demo-discount-note strong,
+.demo-discount-note span {
+    display: block;
+}
+
+.demo-discount-note span {
+    margin-top: 2px;
+    font-size: 0.9rem;
+}
+
+.demo-achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.demo-achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-height: 130px;
+    padding: 15px;
+    border: 1px solid #f0e4da;
+    border-radius: 15px;
+    background: #fffaf5;
+}
+
+.demo-achievement > span {
+    font-size: 1.45rem;
+}
+
+.demo-achievement strong {
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+.demo-achievement small {
+    color: #737b83;
+}
+
+.demo-countdown-card {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #ffad4f;
+    border-radius: 17px;
+    color: #773b00;
+    background: linear-gradient(110deg, #fff0dc, #fff8ef);
+    text-align: center;
+}
+
+.demo-countdown-card h4 {
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.demo-countdown-card p {
+    margin-bottom: 12px;
+    color: #775f4a;
+}
+
+.demo-countdown-label {
+    color: #6e6258;
+}
+
+.demo-countdown-label strong {
+    display: inline-block;
+    margin-left: 5px;
+    color: var(--dark-orange);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+    .demo-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .demo-achievements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .demo-schedule-card {
+        grid-template-columns: 1fr 1.2fr;
+        padding: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+    .demo-success-topline {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .demo-schedule-date strong {
+        font-size: 1.45rem;
+    }
+
+    .demo-achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
